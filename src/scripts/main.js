@@ -3,7 +3,7 @@ AOS.init();
 const momentoDoEvento = new Date("Mar 10, 2026 19:00");
 const timestampDoEvento = momentoDoEvento.getTime();
 
-setInterval(function() {
+const contaOTempo =  setInterval(function() {
     const momentoAtual = new Date();
     const timestampAtual = momentoAtual.getTime();
 
@@ -22,4 +22,8 @@ setInterval(function() {
     
     contador.innerHTML = tempoAteOEvento > 0 
     ? `Começa em ${diasAteOEvento}d ${horasAteOEvento}h ${minutosAteOEvento}m ${segundosAteOEvento}s` : "encerrou";
+
+    if (tempoAteOEvento < 0) {
+        clearInterval(contaOTempo);
+    }
 }, 1000)
