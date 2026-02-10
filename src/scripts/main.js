@@ -1,6 +1,6 @@
 AOS.init();
 
-const momentoDoEvento = new Date("Feb 10, 2026 11:58");
+const momentoDoEvento = new Date("Mar 10, 2026 19:00");
 const timestampDoEvento = momentoDoEvento.getTime();
 
 setInterval(function() {
